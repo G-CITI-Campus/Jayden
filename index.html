@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<link href="StyleSheet.css" rel="stylesheet" type="text/css">
+
+<title>Overflow Examples</title>
+
+<style>
+
+#content { 
+	-ms-flow-into: main;
+  }
+
+.region {
+	-ms-flow-from: main;
+    -ms-region-fragment: auto;
+    overflow: visible;
+    background: #0ff;
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin: 20px;
+  }
+  .threeColumns {
+      width: 100px;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>CSS Regions</h1>
+<iframe id="content" src="content.html"></iframe>
+<div id="region1" class="region"></div>
+<div id="region2" class="region"></div>
+<div id="region3" class="region"></div>
+
+</body>
+</html>

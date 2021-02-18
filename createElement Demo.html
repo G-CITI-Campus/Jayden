@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#canvas {
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<canvas id="canvas" width="200px;" height="300px"></canvas>
+
+<p id="demo"></p>
+<script>
+document.addEventListener("DOMContentLoaded", init, false);
+
+function init() {
+  var canvas = 
+      document.getElementById("canvas");
+    if ("ontouchstart" in document.documentElement) {
+      canvas.addElementListener("touchstart", detect, false);
+        }
+    else {
+      canvas.addEventListener("mousedown", detect, false);
+        }
+  }
+
+function detect() {
+  if ("ontouchstart" in document.documentElement) {
+      alert("Touch screen device detected!");
+      }
+    else {
+      alert("No touch screen device detected");
+        }
+  }
+</script></body>
+</html> 
